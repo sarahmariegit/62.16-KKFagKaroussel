@@ -33,10 +33,18 @@ function randomDisciplines() {
  * @param {string[]} discs the two disciplines
  * @return {string[]} two random subjects
  */
- function randomSubjects(discs) {
 
-    return ["differentialligninger", "animationer"];
-}
+/*
+function randomSubjects(discs) {
+    var subjectNum = 0; 
+        while(subjectNum < allSubjects.length){
+        
+        }
+            return ["Første subject er" + discs[0] + "andet subject er" discs];
+} 
+*/ 
+//det må i selv finde ud af :))
+
 /** nr 7
  * Make string that informs user of disciplines and subjects
  * @param {string[]} discs The two disciplines
