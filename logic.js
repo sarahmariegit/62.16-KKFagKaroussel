@@ -45,7 +45,8 @@ function randomDisciplines() {
  */
 function makePrompt(discs, subs) {
 
-    return ""
+    return "første fag er:" + discs[0]+ "emnet er: " + subs[0]
+    
 }
 
 function loadPrompt() {
