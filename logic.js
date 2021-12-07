@@ -1,5 +1,5 @@
-var ifSubjects = ["funktioner", "animationer","eksempel emne1"] //nr 2
-var mathSubjects = ["differentialligninger", "vektorer i rummet", "eksempel emne1"] //nr 2
+var ifSubjects = ["funktioner", "animationer","IT-sikkerhed", "Hackere", "Sociale Medier", "Robot teknologi", "Talsystemer", "Kodesprog", "Computeren", "Kryptering", "Cloud/Database/Datalagring", "Programering"] //nr 2
+var mathSubjects = ["differentialligninger", "vektorer i rummet", "Matrix", "Statestik", "Sandsynlighedsregning", "Vector funktioner", "Intergralrening", "Trigonomitriske funktioner", "Differentialregning", "Matematiske modeller", "Matematik i historien(græsk, egypten)", "Historiens matematikere"] //nr 2
 //nr: 3 fysik, biotek, 
 //nr: 4 samf, engelsk 
 
@@ -25,11 +25,13 @@ var allSubjects = {
  */
 function randomDisciplines() {
     //Math.random()
+    Math.random("Informatik")
+
     return ["Informatik", "Matematik"];
 }
 
 /** nr 6
- * Returns a list of two random subjects from the two given disciplines
+ * Returns a list of two random subjects from the two giv en disciplines
  * @param {string[]} discs the two disciplines
  * @return {string[]} two random subjects
  */
