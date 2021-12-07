@@ -24,9 +24,25 @@ var allSubjects = {
  * informatik, the second is random. 
  */
 function randomDisciplines() {
-    //Math.random()
-    return ["Informatik", "Matematik"];
+
+var subject = 0;
+    Math.random();
+        return ["Informatik", "Matematik"];
 }
+//text(allSubjects.random)
+
+// vi har læst meget på internettet, så vi er kommet hertil
+/* 
+n = random.randint(0,5)
+if (n<1){
+    subject = allSubjects.mathSubjects
+else if (n<2){
+    subject =
+}
+} */
+
+
+
 
 /** nr 6
  * Returns a list of two random subjects from the two given disciplines
