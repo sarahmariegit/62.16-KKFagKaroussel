@@ -2,6 +2,8 @@ var ifSubjects = ["funktioner", "animationer","eksempel emne1"] //nr 2
 var mathSubjects = ["differentialligninger", "vektorer i rummet", "eksempel emne1"] //nr 2
 var samfSubjects = ["Dansk polotik", "International politik","Økonomi","Sociologi","Metode","Sociale medier","Styreformer","Kina","Familietyper","Finanskrisen"]//nr: 3 fysik, biotek, 
 var engSubjects = ["Retorik","New Zealand", "Africa","Post-modernisme","Dystopi", "Victorian age","Shakespeare","Nordamerika's historie","Racisme","Horror" ]
+var ifSubjects = ["funktioner", "animationer","IT-sikkerhed", "Hackere", "Sociale Medier", "Robot teknologi", "Talsystemer", "Kodesprog", "Computeren", "Kryptering", "Cloud/Database/Datalagring", "Programering"] //nr 2
+var mathSubjects = ["differentialligninger", "vektorer i rummet", "Matrix", "Statestik", "Sandsynlighedsregning", "Vector funktioner", "Intergralrening", "Trigonomitriske funktioner", "Differentialregning", "Matematiske modeller", "Matematik i historien(græsk, egypten)", "Historiens matematikere"] //nr 2
 //nr: 3 fysik, biotek, 
 var fysSubjects = ["Relativitetsteori","harmoniske svinginer","varme energi","aerodynamik","exoplaneter","Atomkraft","Mekanik","banekurver","Bølger","GPS-systemer","Ellære","Radioaktivitet","Mørkt stof","Kvantemekanik","Tyngdekraft","Intertimomenter","Vedvarende energi","Raketfysik"]
 var btSubjects = ["Cloning", "Nanoteknologi","Genmodifikation","Kræftceller","Livstilssygdomme","Epidemier","radioaktivitet","Kønssygdomme","Nikotin"]
@@ -31,6 +33,10 @@ var allSubjects = {
  * informatik, the second is random. 
  */
 function randomDisciplines() {
+    //Math.random()
+    Math.random("Informatik")
+
+    return ["Informatik", "Matematik"];
 
 var subject = 0;
     Math.random();
@@ -52,7 +58,7 @@ else if (n<2){
 
 
 /** nr 6
- * Returns a list of two random subjects from the two given disciplines
+ * Returns a list of two random subjects from the two giv en disciplines
  * @param {string[]} discs the two disciplines
  * @return {string[]} two random subjects
  */
