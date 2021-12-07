@@ -1,6 +1,7 @@
 var ifSubjects = ["funktioner", "animationer","eksempel emne1"] //nr 2
 var mathSubjects = ["differentialligninger", "vektorer i rummet", "eksempel emne1"] //nr 2
-//nr: 3 fysik, biotek, 
+var samfSubjects = ["Dansk polotik", "International politik","Økonomi","Sociologi","Metode","Sociale medier","Styreformer","Kina","Familietyper","Finanskrisen"]//nr: 3 fysik, biotek, 
+var engSubjects = ["Retorik","New Zealand", "Africa","Post-modernisme","Dystopi", "Victorian age","Shakespeare","Nordamerika's historie","Racisme","Horror" ]
 //nr: 4 samf, engelsk 
 
 //Add new subject list
@@ -13,7 +14,8 @@ var allSubjects = {
     //Add discipline
     "Informatik": ifSubjects,
     "Matematik": mathSubjects,
-
+    "Samfundsfag":samfSubjects,
+    "Engelsk": engSubjects,
 }
 
 
