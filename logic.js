@@ -1,6 +1,8 @@
 var ifSubjects = ["funktioner", "animationer","eksempel emne1"] //nr 2
 var mathSubjects = ["differentialligninger", "vektorer i rummet", "eksempel emne1"] //nr 2
 //nr: 3 fysik, biotek, 
+var fysSubjects = ["Relativitetsteori","harmoniske svinginer","varme energi","aerodynamik","exoplaneter","Atomkraft","Mekanik","banekurver","Bølger","GPS-systemer","Ellære","Radioaktivitet","Mørkt stof","Kvantemekanik","Tyngdekraft","Intertimomenter","Vedvarende energi","Raketfysik"]
+var btSubjects = ["Cloning", "Nanoteknologi","Genmodifikation","Kræftceller","Livstilssygdomme","Epidemier","radioaktivitet","Kønssygdomme","Nikotin"]
 //nr: 4 samf, engelsk 
 
 //Add new subject list
@@ -13,7 +15,8 @@ var allSubjects = {
     //Add discipline
     "Informatik": ifSubjects,
     "Matematik": mathSubjects,
-
+    "Fysik": fysSubjects,
+    "Bioteknologi": btSubjects,
 }
 
 
