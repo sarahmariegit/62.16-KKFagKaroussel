@@ -1,3 +1,9 @@
-#prompt {
-    color: "#7700ff";
+body {
+    background-color: lightblue;
+}
+
+textarea {
+    border-style: double;
+    border-color: blue;
+    border-width: 3px;
 }
