@@ -18,6 +18,7 @@ var allSubjects = {
 
 
 
+
 /**nr 5
  * Generate a random discipline by choosing in allSubject
  * @return {string[]} discs A list of two discipline, the first is always
