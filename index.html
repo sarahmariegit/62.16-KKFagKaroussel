@@ -12,14 +12,14 @@
             <h3 id="prompt">
                 Her skal der stå fag og emner
             </h3><br>
-            <form action="https://matquiz.dk/srpAi.php" method="post"> 
+            <form action="/srpApi.php"> 
                 <label for="answer">Kort beskrivelse af mulig emne:</label><br>
-                <input type="hidden" name="fag1" id="fag1" value="f1"></input>
-                <input type="hidden" name="fag2" id="fag2" value="f2"></input>
-                <input type="hidden" name="emne1" id="emne1" value="e1"></input>
-                <input type="hidden" name="emne2" id="emne2" value="e2"></input>
+                <input type="hidden" name="fag1" id="fag1" value="f1"/>
+                <input type="hidden" name="fag2" id="fag2" value="f2"/>
+                <input type="hidden" name="emne1" id="emne1" value="e1"/>
+                <input type="hidden" name="emne2" id="emne2" value="e2"/>
                 <textarea id="answer" name="beskrivelse" row="2" col ="70"></textarea><br>
-                <button onclick="submitPressed()">upload</button>
+                <input type="submit" value="upload">
             </form>
             <script src="logic.js"></script>
         </body>
