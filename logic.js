@@ -1,39 +1,40 @@
 loadPrompt(allSubjects);
 
 function loadPrompt(allSubjects) {
-    discs = randomDisciplines(allSubjects);
-    subs = randomSubjects(discs, allSubjects);
-    displayString = makePrompt(discs, subs);
+    disciplinePair = randomDisciplines(allSubjects);
+    subjectPair = randomSubjects(disciplinePair, allSubjects);
+    displayString = makePrompt(disciplinePair, subjectPair);
     document.getElementById("prompt").innerHTML = displayString;
-    document.getElementById("fag1").value = discs[0];
-    document.getElementById("fag2").value = discs[1];
-    document.getElementById("emne1").value = subs[0];
-    document.getElementById("emne2").value = subs[1];        
+    document.getElementById("fag1").value = disciplinePair[0];
+    document.getElementById("fag2").value = disciplinePair[1];
+    document.getElementById("emne1").value = subjectPair[0];
+    document.getElementById("emne2").value = subjectPair[1];        
 }
 
-/**nr 5
- * Generate a random discipline by choosing in allSubject
- * @return {string[]} A list of two discipline, the first is always
- * informatik, the second is random. 
+/**
+ * 
+ * @param {*} allSubjects 
+ * @returns 
  */
 function randomDisciplines(allSubjects) {
     return ["Informatik", pickRandom(Object.keys(allSubjects))];
 }
 
 /**
- * Picks a random element from array.
- * @param {any[]} anArray 
- * @returns {any} element
+ * 
+ * @param {*} anArray 
+ * @returns 
  */
 function pickRandom(anArray){
     var randomIndex = Math.floor(Math.random() * anArray.length);
     return anArray[randomIndex];
 }
 
-/** nr 6
- * Returns a list of two random subjects from the two giv en disciplines
- * @param {string[]} disciplinePair The two disciplines
- * @return {string[]} Two random subjects
+/**
+ * 
+ * @param {*} disciplinePair 
+ * @param {*} allSubjects 
+ * @returns 
  */
 function randomSubjects(disciplinePair, allSubjects) {
     var subjects1 =  allSubjects[disciplinePair[0]];
@@ -42,14 +43,14 @@ function randomSubjects(disciplinePair, allSubjects) {
 } 
 
 
-/** nr 7
- * Make string that informs user of disciplines and subjects
- * @param {string[]} disciplinePair The two disciplines
- * @param {string[]} subs The two subjects
- * @return {string} En streng som fortæller fag of emner
+/**
+ * 
+ * @param {*} disciplinePair 
+ * @param {*} subjectPair 
+ * @returns 
  */
-function makePrompt(disciplinePair, subs) {
-    return "første fag er: " + disciplinePair[0] + " emnet er: " + subs[0] 
-        + "andet fag er:" + disciplinePair[1] + " emnet er: " + subs[1];
+function makePrompt(disciplinePair, subjectPair) {
+    return "første fag er:" + disciplinePair[0] + "emnet er: " + subjectPair[0] 
+        + "andet fag er:" + disciplinePair[1] + " emnet er: " + subjectPair[1];
 }
 
