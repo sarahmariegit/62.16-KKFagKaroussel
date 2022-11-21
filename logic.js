@@ -70,19 +70,18 @@ function randomSubjects(disciplinePair) {
  * @return {string} En streng som fortæller fag of emner
  */
 function makePrompt(disciplinePair, subs) {
-
-    return "første fag er: " + disciplinePair[0]+ " emnet er: " + subs[0] +
-        "andet fag er:" + disciplinePair[1]+ " emnet er: " + subs[1];
+    return "første fag er: " + disciplinePair[0] + " emnet er: " + subs[0] 
+        + "andet fag er:" + disciplinePair[1] + " emnet er: " + subs[1];
 }
 
 function loadPrompt() {
     discs = randomDisciplines();
     subs = randomSubjects(discs);
     displayString = makePrompt(discs, subs);
-    $("#prompt").html(displayString);
-    $("#fag1").val(discs[0]);
-    $("#fag2").val(discs[1]);
-    $("#emne1").val(subs[0]);
-    $("#emne2").val(subs[1]);        
+    document.getElementById("prompt").innerHTML = displayString;
+    document.getElementById("fag1").value = discs[0];
+    document.getElementById("fag2").value = discs[1];
+    document.getElementById("emne1").value = subs[0];
+    document.getElementById("emne2").value = subs[1];        
 }
 loadPrompt();
