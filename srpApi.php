@@ -8,9 +8,9 @@ $fag2 = $_GET["fag2"];
 $beskrivelse = $_GET["beskrivelse"];
 $sql = "INSERT INTO srpAi (fag1, emne1, fag2, emne2, beskrivelse) 
         VALUES ('$fag1','$emne1','$fag2', '$emne2', '$beskrivelse')";
-echo $sql; 
-if(!$db->query($sql)){
-    echo '{"Error": "$sql"}';
-}
+ 
+$dbMadeError = !$db->query($sql);
+if($dbMadeError)
+    echo "{\"Error\": \"$sql\"}";
 ?>
 <script> window.location = "/index.html";</script>

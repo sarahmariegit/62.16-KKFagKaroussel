@@ -10,7 +10,7 @@ var mathSubjects = ["differentialligninger", "vektorer i rummet", "Matrix", "Sta
 
 var discs = ["Informatik",""];
 var subs = ["", ""];
-$("#answer").val("ans");
+document.getElementById("answer").value = "";
 
 //nr 3 og 4
 var allSubjects = {
@@ -23,7 +23,7 @@ var allSubjects = {
     "Bioteknologi": btSubjects,
 }
 //informatik removed
-var allDiscs = [ 
+var allDisciplines = [ 
     "Matematik",
     "Samfundsfag",
     "Engelsk",
@@ -33,43 +33,46 @@ var allDiscs = [
 
 /**nr 5
  * Generate a random discipline by choosing in allSubject
- * @return {string[]} discs A list of two discipline, the first is always
+ * @return {string[]} A list of two discipline, the first is always
  * informatik, the second is random. 
  */
 function randomDisciplines() {
-    var nDiscs = allDiscs.length;
-    var randomIndex = Math.floor(Math.random()*nDiscs);
-    var otherDisc = allDiscs[randomIndex]; 
-    var discs = ["Informatik", otherDisc];
-    return discs;
+    return ["Informatik", pickRandom(allDisciplines)];
+}
+
+/**
+ * Picks a random element from array.
+ * @param {any[]} anArray 
+ * @returns {any} element
+ */
+function pickRandom(anArray){
+    var randomIndex = Math.floor(Math.random() * allDisciplines.length);
+    return anArray[randomIndex];
 }
 
 /** nr 6
  * Returns a list of two random subjects from the two giv en disciplines
- * @param {string[]} discs The two disciplines
+ * @param {string[]} disciplinePair The two disciplines
  * @return {string[]} Two random subjects
  */
-function randomSubjects(discs) {
-    var subjects1 =  allSubjects[discs[0]];
-    var subjects2 =  allSubjects[discs[1]];
-    var randomIndex1 = Math.floor(Math.random()*subjects1.length);
-    var randomIndex2 = Math.floor(Math.random()*subjects2.length);
-    var subjects = [subjects1[randomIndex1], subjects2[randomIndex2]];
-    return subjects;
+function randomSubjects(disciplinePair) {
+    var subjects1 =  allSubjects[disciplinePair[0]];
+    var subjects2 =  allSubjects[disciplinePair[1]];
+    return [pickRandom(subjects1), pickRandom(subjects2)];
 } 
 
 //det må i selv finde ud af :))
 
 /** nr 7
  * Make string that informs user of disciplines and subjects
- * @param {string[]} discs The two disciplines
+ * @param {string[]} disciplinePair The two disciplines
  * @param {string[]} subs The two subjects
  * @return {string} En streng som fortæller fag of emner
  */
-function makePrompt(discs, subs) {
+function makePrompt(disciplinePair, subs) {
 
-    return "første fag er: " + discs[0]+ " emnet er: " + subs[0] +
-        "andet fag er:" + discs[1]+ " emnet er: " + subs[1];
+    return "første fag er: " + disciplinePair[0]+ " emnet er: " + subs[0] +
+        "andet fag er:" + disciplinePair[1]+ " emnet er: " + subs[1];
 }
 
 function loadPrompt() {
